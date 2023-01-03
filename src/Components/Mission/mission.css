@@ -29,7 +29,7 @@
   width: 15%;
   padding: 10px;
   border-right: 1px solid rgb(182, 180, 180, 0.5);
-  color:white;
+  color: white;
   font-weight: 700;
   font-size: 13px;
 }
@@ -40,7 +40,6 @@
   align-items: center;
   padding: 10px;
   width: 15%;
-
 }
 
 .joinMission {
@@ -51,6 +50,7 @@
   color: rgb(88, 87, 87);
   border-radius: 5px;
 }
+
 .leaveMission {
   height: 30px;
   width: 85%;
@@ -61,14 +61,14 @@
   border-radius: 5px;
 }
 
-.mission-status{
-  background-color: grey;  
-  padding: 4px 8px;
-  border-radius: 10px;
-}
-.mission-status-Active{
-  background-color: hsl(180deg 65% 40%);
+.mission-status {
+  background-color: grey;
   padding: 4px 8px;
   border-radius: 10px;
 }
 
+.mission-status-Active {
+  background-color: hsl(180deg 65% 40%);
+  padding: 4px 8px;
+  border-radius: 10px;
+}
