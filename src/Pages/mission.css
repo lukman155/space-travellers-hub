@@ -1,0 +1,42 @@
+.mission-container {
+  margin: 20px 30px 0 30px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.mission-heading {
+  border: 2px solid rgb(182, 180, 180, 0.5);
+  display: flex;
+  list-style: none;
+  font-weight: 700;
+}
+
+.mission-heading li {
+  padding: 1%;
+}
+
+.mission-heading :nth-child(3) {
+  width: 15%;
+  border-right: 2px solid rgb(182, 180, 180, 0.5);
+}
+
+.mission-heading :nth-child(2) {
+  width: 67%;
+  border-right: 2px solid rgb(182, 180, 180, 0.5);
+}
+
+.mission-heading :nth-child(1) {
+  width: 10%;
+  border-right: 2px solid rgb(182, 180, 180, 0.5);
+  text-align: left;
+}
+
+.mission-heading :nth-child(4) {
+  width: 15%;
+}
+
+.missionList {
+  margin-top: 0;
+  padding-left: 0;
+}
