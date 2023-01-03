@@ -1,0 +1,49 @@
+.mission {
+  border: 1px solid rgb(182, 180, 180, 0.5);
+  border-top: none;
+}
+
+.mission-details {
+  margin: 0;
+  display: flex;
+}
+
+.mission-name {
+  padding: 10px;
+  width: 10%;
+  border-right: 1px solid rgb(182, 180, 180, 0.5);
+  font-weight: 700;
+}
+
+.mission-description {
+  font-size: 15px;
+  padding: 10px;
+  width: 65%;
+  border-right: 1px solid rgb(182, 180, 180, 0.5);
+}
+
+.mission-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  padding: 10px;
+  border-right: 1px solid rgb(182, 180, 180, 0.5);
+}
+
+.mission-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  width: 15%;
+}
+
+.mission-button button {
+  height: 30px;
+  width: 85%;
+  padding: 0;
+  background-color: white;
+  color: rgb(88, 87, 87);
+  border-radius: 5px;
+}
