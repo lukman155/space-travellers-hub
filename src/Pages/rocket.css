@@ -1,6 +1,48 @@
-.rocket-img {
-    object-fit: cover;
-    width: 140px;
-    height: 100px;
+article {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  align-items: center;
+
 }
 
+.rocket-img {
+  object-fit: cover;
+  max-width: 240px;
+}
+
+.rocket-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rocket-details > * {
+  margin:0;
+  padding: 0;
+}
+
+.reserve-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.reserve-btn:hover {
+  background-color: #0069D9;
+}
+
+.reserved {
+  background-color: white;
+  color: darkgray;
+  border: 1px solid darkgray;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
