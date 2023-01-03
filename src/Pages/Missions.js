@@ -14,9 +14,10 @@ const Missions = () => {
         <li />
       </ul>
       <div className="missionList">
-        {missionList.map((mission) => (
+        {missionList.map((mission, index) => (
 
           <Mission
+            index={index}
             key={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
