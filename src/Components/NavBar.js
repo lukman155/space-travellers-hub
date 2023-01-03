@@ -19,7 +19,7 @@ const NavBar = () => {
         </NavLink>
         <h1>Space Travelers Hub</h1>
       </div>
-      <ul>
+      <ul className="nav-list">
         <li>
           <NavLink
             to="rockets"
