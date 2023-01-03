@@ -3,7 +3,6 @@ import missionsReducer from './Mission/mission';
 
 const rootReducer = combineReducers({
   missions: missionsReducer,
-  // Add reducers here
 });
 
 const store = configureStore({
