@@ -15,6 +15,7 @@ const getMissionsSuccess = (missions) => ({
     mission_name: mission.mission_name,
     description: mission.description,
     join: false,
+    wikipedia: mission.wikipedia,
   })),
 });
 
