@@ -3,7 +3,6 @@ article {
   gap: 1rem;
   padding: 1rem;
   align-items: center;
-
 }
 
 .rocket-img {
@@ -19,7 +18,7 @@ article {
 }
 
 .rocket-details > * {
-  margin:0;
+  margin: 0;
   padding: 0;
 }
 
@@ -27,14 +26,14 @@ article {
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 5px;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
   cursor: pointer;
   align-self: flex-start;
 }
 
 .reserve-btn:hover {
-  background-color: #0069D9;
+  background-color: #0069d9;
 }
 
 .reserved {
