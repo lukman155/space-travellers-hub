@@ -1,10 +1,18 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Mission from '../Components/Mission/Missions';
 import './mission.css';
+import { getMissions } from '../Redux/Mission/mission';
 
 const Missions = () => {
+  const dispatch = useDispatch();
   const missionList = useSelector((state) => state.missions);
+  useEffect(() => {
+    if (missionList.length) {
+      return;
+    }
+    dispatch(getMissions());
+  }, [dispatch, missionList.length]);
   return (
     <div className="mission-container">
       <ul className="mission-heading">
@@ -21,7 +29,8 @@ const Missions = () => {
             key={mission.mission_id}
             name={mission.mission_name}
             description={mission.description}
-            status="Not a member"
+            join={mission.join}
+            keyValue={mission.mission_id}
           />
         ))}
       </div>

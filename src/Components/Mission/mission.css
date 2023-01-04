@@ -22,13 +22,16 @@
   border-right: 1px solid rgb(182, 180, 180, 0.5);
 }
 
-.mission-status {
+.mission-status-container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 15%;
   padding: 10px;
   border-right: 1px solid rgb(182, 180, 180, 0.5);
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
 }
 
 .mission-button {
@@ -39,11 +42,33 @@
   width: 15%;
 }
 
-.mission-button button {
+.joinMission {
   height: 30px;
   width: 85%;
   padding: 0;
   background-color: white;
   color: rgb(88, 87, 87);
   border-radius: 5px;
+}
+
+.leaveMission {
+  height: 30px;
+  width: 85%;
+  padding: 0;
+  background-color: white;
+  color: rgb(238, 26, 26);
+  border: 2px solid rgb(238, 26, 26);
+  border-radius: 5px;
+}
+
+.mission-status {
+  background-color: grey;
+  padding: 4px 8px;
+  border-radius: 10px;
+}
+
+.mission-status-Active {
+  background-color: hsl(180deg 65% 40%);
+  padding: 4px 8px;
+  border-radius: 10px;
 }
