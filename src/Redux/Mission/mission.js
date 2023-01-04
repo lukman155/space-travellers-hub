@@ -1,5 +1,5 @@
-import axios from 'axios';
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import fetchMission from './fetchMission';
 
 const missions = [];
 let missionState;
@@ -22,7 +22,7 @@ const getMissionsSuccess = (missions) => ({
 export const getMissions = createAsyncThunk(
   GET_MISSIONS,
   async (_, thunk) => {
-    const response = await axios.get('https://api.spacexdata.com/v3/missions');
+    const response = await fetchMission();
     thunk.dispatch(getMissionsSuccess(response.data));
   },
 );
