@@ -22,6 +22,14 @@ article {
   padding: 0;
 }
 
+.reserve-tag {
+  background-color: teal;
+  border-radius: 10%;
+  color: white;
+  padding: 2px;
+  margin-right: 5px;
+}
+
 .reserve-btn {
   padding: 0.5rem 1rem;
   border: none;
