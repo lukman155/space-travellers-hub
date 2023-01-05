@@ -1,39 +1,53 @@
-/* eslint-disable no-param-reassign */
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
+import { createAsyncThunk } from '@reduxjs/toolkit';
 
-const GET_ROCKETS = 'spacetravellershub/rockets/fetchRockets';
+const rockets = [];
+let rocketState;
 
-const initialState = {
-  rockets: [],
-  status: 'idle',
-  error: null,
+const GET_ROCKETS = 'SPACETRAVELLERSHUB/ROCKETS/GET_ROCKETS';
+const GET_ROCKETS_SUCCESS = 'SPACETRAVELLERSHUB/ROCKETS/GET_ROCKETS_SUCCESS';
+const TOGGLE_RESERVE = 'SPACETRAVELLERSHUB/ROCKETS/ROCKET_RESERVED';
+
+const getRocketsSuccess = (rockets) => ({
+  type: GET_ROCKETS_SUCCESS,
+  payload: rockets.map((rocket) => ({
+    id: rocket.id,
+    rocket_name: rocket.rocket_name,
+    description: rocket.description,
+    flickr_images: rocket.flickr_images,
+    reserved: false,
+    wikipedia: rocket.wikipedia,
+  })),
+});
+
+export const getRockets = createAsyncThunk(
+  GET_ROCKETS,
+  async (_, thunk) => {
+    const response = await axios.get('https://api.spacexdata.com/v3/rockets');
+    thunk.dispatch(getRocketsSuccess(response.data));
+  },
+);
+
+export const toggleReserve = (id) => (
+  {
+    type: TOGGLE_RESERVE,
+    id,
+  });
+
+const rocketsReducer = (state = rockets, action) => {
+  switch (action.type) {
+    case GET_ROCKETS_SUCCESS:
+      return [...action.payload];
+    case TOGGLE_RESERVE:
+      rocketState = state.map((rocket) => {
+        if (rocket.id !== action.id) { return rocket; }
+        return { ...rocket, reserved: !rocket.reserved };
+      });
+      return rocketState;
+
+    default:
+      return state;
+  }
 };
 
-export const fetchRockets = createAsyncThunk(GET_ROCKETS, async () => {
-  const response = await fetch('https://api.spacexdata.com/v3/rockets');
-  return response.json();
-});
-
-const rocketsSlice = createSlice({
-  name: 'rockets',
-  initialState,
-  reducers: {},
-  extraReducers(builder) {
-    builder
-      .addCase(fetchRockets.pending, (state) => {
-        state.status = 'loading';
-      })
-      .addCase(fetchRockets.fulfilled, (state, action) => {
-        state.status = 'succeeded';
-        state.rockets = state.rockets.concat(action.payload);
-      })
-      .addCase(fetchRockets.rejected, (state, action) => {
-        state.status = 'failed';
-        state.error = action.error.message;
-      });
-  },
-});
-
-export default rocketsSlice.reducer;
-
-export const selectAllRockets = (state) => state.rockets.rockets;
+export default rocketsReducer;
