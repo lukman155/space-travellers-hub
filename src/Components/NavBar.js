@@ -35,7 +35,9 @@ const NavBar = () => {
           >
             Missions
           </NavLink>
+
         </li>
+        <div className="vertical-line" />
         <li>
           <NavLink to="myprofile">
             {({ isActive }) => (

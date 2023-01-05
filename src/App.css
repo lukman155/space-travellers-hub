@@ -26,9 +26,19 @@ nav > div {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .underline {
   text-decoration: underline;
+}
+
+.vertical-line {
+  border-left: 2px solid black;
+
+  /* margin-left: 5px; */
 }
