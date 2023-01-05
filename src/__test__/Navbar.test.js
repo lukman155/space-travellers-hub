@@ -4,8 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../Redux/configureStore';
-import NavBar from '../Components/Navbar';
 import App from '../App';
+import NavBar from '../Components/Navbar';
 
 describe('Navbar', () => {
   it('renders correctly', () => {
