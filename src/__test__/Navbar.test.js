@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import renderer from 'react-test-renderer';
 import store from '../Redux/configureStore';
-import Navbar from '../Components/Navbar';
+import NavBar from '../Components/Navbar';
 import App from '../App';
 
 describe('Navbar', () => {
@@ -12,7 +12,7 @@ describe('Navbar', () => {
     const tree = renderer
       .create(
         <BrowserRouter>
-          <Navbar />
+          <NavBar />
         </BrowserRouter>,
       )
       .toJSON();
