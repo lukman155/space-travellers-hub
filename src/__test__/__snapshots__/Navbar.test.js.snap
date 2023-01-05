@@ -39,6 +39,9 @@ exports[`Navbar renders correctly 1`] = `
         Missions
       </a>
     </li>
+    <div
+      className="vertical-line"
+    />
     <li>
       <a
         className=""
