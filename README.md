@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Will update soon...
+> [Click Here](space-travellers-d6xr6xdet-asharanjith.vercel.app)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
