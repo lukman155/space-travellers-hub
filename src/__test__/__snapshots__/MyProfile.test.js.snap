@@ -31,15 +31,9 @@ exports[`MyProfile renders correctly 1`] = `
     <ul
       className="profileList"
     >
-      <li>
-        Rocket 1
-      </li>
-      <li>
-        Rocket 2
-      </li>
-      <li>
-        Rocket 3
-      </li>
+      <p>
+        No Rockets Reserved
+      </p>
     </ul>
   </div>
 </div>
