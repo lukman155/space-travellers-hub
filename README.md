@@ -66,7 +66,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> [Click Here](space-travellers-d6xr6xdet-asharanjith.vercel.app)
+> [Click Here](https://space-travellers-hub-six.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
