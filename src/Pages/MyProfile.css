@@ -1,0 +1,61 @@
+.profile {
+  display: flex;
+  justify-content: flex-start;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.myContainer {
+  padding: 20px;
+  width: 80%;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.profileList {
+  list-style: none;
+}
+
+.profileList li {
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+}
+
+.leaveMissionButton {
+  height: 30px;
+  text-align: center;
+  font-size: 15px;
+  padding: 1%;
+  width: 40%;
+  background-color: white;
+  color: rgb(88, 87, 87);
+  border: 2px solid rgb(88, 87, 87);
+  border-radius: 5px;
+  align-self: end;
+}
+
+.profileList li > a {
+  color: rgb(88, 87, 87);
+  text-decoration: none;
+}
+
+.profileList li > a:hover {
+  color: rgb(38, 85, 155);
+}
+
+.profileList li > div {
+  flex-grow: 2;
+}
+
+.leaveMissionButton:hover {
+  color: rgb(238, 26, 26);
+  border: 2px solid rgb(238, 26, 26);
+  cursor: pointer;
+}
